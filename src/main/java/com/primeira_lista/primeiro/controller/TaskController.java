@@ -4,10 +4,13 @@ import com.primeira_lista.primeiro.model.Task;
 import com.primeira_lista.primeiro.repository.TaskRepository;
 import java.util.List;
 import java.util.Optional;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 
 @RestController
 @RequestMapping("/api/tasks")
@@ -49,14 +52,20 @@ public class TaskController {
     }
   }
 
-  @DeleteMapping("/{id}")
-  public ResponseEntity<Void> deleteTask(@PathVariable Long id) {
+ @DeleteMapping("/{id}")
+public ResponseEntity<Void> deleteTask(@PathVariable Long id) {
+    Logger logger = LoggerFactory.getLogger(TaskController.class);
+    logger.info("Tentando excluir a tarefa com ID: {}", id);
+
     Optional<Task> task = taskRepository.findById(id);
     if (task.isPresent()) {
-      taskRepository.delete(task.get());
-      return ResponseEntity.noContent().build();
+        logger.info("Tarefa encontrada: {}", task.get());
+        taskRepository.delete(task.get());
+        logger.info("Tarefa excluída com sucesso.");
+        return ResponseEntity.noContent().build();
     } else {
-      return ResponseEntity.notFound().build();
+        logger.warn("Tarefa com ID {} não encontrada.", id);
+        return ResponseEntity.notFound().build();
     }
-  }
+}
 }

@@ -154,18 +154,40 @@ Content-Type: application/json
 
 # Estrutura do Projeto
 ```bash
-src/main/java  
-└── com/primeira_lista/primeiro  
-    ├── controller  
-    │   └── TaskController.java  
-    ├── model  
-    │   └── Task.java  
-    ├── repository  
-    │   └── TaskRepository.java
-    ├── service  
-    │   ├── TaskService.java  
-    │   └── TaskServiceImpl.java  
-    └── PrimeiroApplication.java
+PRIMEIRA_LISTA/
+├── .mvn/
+├── .vscode/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── primeira_lista/
+│   │   │           └── primeiro/
+│   │   │               ├── controller/
+│   │   │               │   └── TaskController.java
+│   │   │               ├── model/
+│   │   │               │   └── Task.java
+│   │   │               ├── repository/
+│   │   │               │   └── TaskRepository.java
+│   │   │               ├── service/
+│   │   │               │   ├── TaskService.java
+│   │   │               │   └── TaskServiceImpl.java
+│   │   │               └── PrimeiroApplication.java
+│   │   └── resources/
+│   │       └── application.properties
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── primeira_lista/
+│                   └── primeiro/
+│                       └── PrimeiroApplicationTests.java
+├── target/
+├── .gitattributes
+├── .gitignore
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+└── README.md
 ```
 
 # Configurações do Projeto

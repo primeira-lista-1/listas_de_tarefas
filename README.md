@@ -22,6 +22,8 @@ Este projeto é uma API RESTful desenvolvida em **Java com Spring Boot** para ge
 - **H2 Database**: Banco de dados em memória para desenvolvimento e testes.
 - **Swagger (springdoc-openapi)**: Documentação automática da API.
 - **Maven**: Gerenciamento de dependências e build do projeto.
+- **Docker**: Para conteinerização da aplicação.
+- **Docker Compose**: Para gerenciar o container da aplicação e do banco de dados.
 
 ---
 
@@ -34,20 +36,23 @@ Siga os passos abaixo para configurar e executar o projeto localmente.
 - Java 21 instalado.
 - Maven instalado.
 - Git instalado (opcional, para clonar o repositório).
+- Docker e Docker Compose instalados (para execução com contêineres).
 
 ### Passos
+
+#### Executar sem Docker
 
 1. **Clone o Repositório**:
 
 ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
-   cd nome-do-repositorio
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
+cd nome-do-repositorio
 ```
 
 2. **Compile o Projeto**:
 
 ```bash
-mvn clean install
+mvn clean package -DskipTests
 Execute o Projeto:
 ```
 
@@ -56,18 +61,52 @@ Execute o Projeto:
 ```bash
 mvn spring-boot:run
 ```
-
 4. **Acesse a API**:
 
-A API estará disponível em http://localhost:8080.
-
-Acesse o Swagger UI em http://localhost:8080/swagger-ui.html para testar os endpoints.
+Acesse o Swagger UI em http://localhost:9000/swagger-ui/index.html#/ para testar os endpoints.
 
 <!-- 5. **Banco de Dados H2**:
 
 O console do H2 pode ser acessado em http://localhost:8080/h2-console.
 
 Use as credenciais configuradas no application.properties (usuário sa, senha password). -->
+
+## 🐳 Executando com Docker-Compose  
+
+Caso prefira rodar a aplicação dentro de um contêiner Docker, siga os passos abaixo:  
+
+### 1️⃣ Clone o Repositório  
+
+#### Se ainda não clonou o repositório, execute  
+
+### 2️⃣. Gere o arquivo .jar localmente (se estiver usando Maven)
+```bash
+./mvnw clean package -DskipTests
+```
+### 4️⃣. Verifique se o .jar foi criado
+```bash
+ls -l target/*.jar
+```
+### 3️⃣ Construa a Imagem Docker
+
+```bash
+docker-compose build --no-cache
+```
+### 5️⃣ Execute o Contêiner
+```bash
+docker-compose up -d
+```
+### 6️⃣ Limpeza do Ambiente (Se Necessário)
+```bash
+docker-compose down -v
+```
+### 7️⃣ Acesse a API
+
+#### Após o contêiner estar rodando, você pode acessar os seguintes links:
+
+- Swagger UI: http://localhost:9000/swagger-ui/index.html#/
+
+
 
 
 ## Endpoints da API

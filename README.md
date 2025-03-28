@@ -22,6 +22,9 @@ Este projeto é uma API RESTful desenvolvida em **Java com Spring Boot** para ge
 - **H2 Database**: Banco de dados em memória para desenvolvimento e testes.
 - **Swagger (springdoc-openapi)**: Documentação automática da API.
 - **Maven**: Gerenciamento de dependências e build do projeto.
+- **Extensões recomendadas no VS Code**:
+Spring Boot Tools (para integração com o Spring Boot)
+Java Extension Pack (inclui várias ferramentas úteis para Java, como o Language Support for Java)
 
 ---
 
@@ -47,19 +50,41 @@ Siga os passos abaixo para configurar e executar o projeto localmente.
 2. **Compile o Projeto**:
 
 ```bash
-mvn clean install
-Execute o Projeto:
+mvn clean package -DskipTests
 ```
 
-3. **Execute o Projeto**:
+#### 3. **Execute o Projeto**:
 
-```bash
-mvn spring-boot:run
-```
+Se você está utilizando o VS Code para o desenvolvimento, siga esses passos para rodar o projeto com facilidade:
 
-4. **Acesse a API**:
+##### 1. Instale a Extensão Spring Boot Dashboard
 
-A API estará disponível em http://localhost:8080.
+   - Abra o VS Code.
+
+   - Vá para a Visualização de Extensões (ícone de quadrado no lado esquerdo) ou use o atalho Ctrl + Shift + X.
+
+   - Pesquise por Spring Boot Dashboard e clique em Instalar.
+
+**Isso adicionará suporte para rodar e depurar facilmente sua aplicação Spring Boot no VS Code.**
+
+##### 2. Abra o Projeto no VS Code
+
+   - Certifique-se de ter aberto a pasta do projeto no VS Code.
+
+##### 3. Rodando o Projeto
+
+  Após a instalação da extensão Spring Boot Dashboard:
+
+   - Clique na Visualização do Spring Boot Dashboard no lado esquerdo (ícone de quadrado com o logotipo do Spring).
+
+   - Você verá sua aplicação listada. Clique em Run para iniciar a aplicação.
+
+Alternativamente, você pode:
+
+   - Usar o Start Debugging (F5).
+   - Ou clicar com o botão direito na classe principal (PrimeiroApplication.java) no Explorer e escolher Run Java ou Debug Java.
+
+#### 4. Acesse a API:
 
 Acesse o Swagger UI em http://localhost:8080/swagger-ui.html para testar os endpoints.
 
@@ -109,8 +134,8 @@ Content-Type: application/json
   "completed": false
 }
 ```
-### Listar Todas as Tarefas
-## Requisição:
+### Listar Tarefas
+### Requisição:
 
 ```bash
 GET /api/tasks

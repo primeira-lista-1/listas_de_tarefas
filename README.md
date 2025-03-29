@@ -1,6 +1,8 @@
 # Projeto: Gerenciamento de Tarefas (Task Manager)
 
-Este projeto é uma API RESTful desenvolvida em **Java com Spring Boot** para gerenciar tarefas. Ele permite a criação, leitura, atualização e exclusão (CRUD) de tarefas, utilizando um banco de dados em memória **Postgres** para armazenamento. A API segue as boas práticas de desenvolvimento e é documentada com o **Swagger** para facilitar o teste e a integração.
+Este projeto é uma API RESTful desenvolvida em Java com Spring Boot para gerenciar tarefas. Ele permite a criação, leitura, atualização e exclusão (CRUD) de tarefas, utilizando um banco de dados PostgreSQL rodando em um contêiner Docker para armazenamento.
+
+A API segue as boas práticas de desenvolvimento e é documentada com o Swagger para facilitar o teste e a integração. O projeto inclui um arquivo docker-compose.yml que configura automaticamente um contêiner com a imagem oficial do PostgreSQL, garantindo um ambiente de banco de dados consistente e fácil de configurar.
 
 ---
 

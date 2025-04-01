@@ -33,4 +33,8 @@ build/
 .vscode/
 
 .env
-run.sh
+*.env
+*.log
+*.swp
+*.swo
+*.DS_Store

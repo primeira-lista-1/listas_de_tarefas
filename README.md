@@ -41,11 +41,11 @@ cd nome-do-repositorio
 #### 1️⃣ 📌 Pré-requisitos
 Antes de iniciar, certifique-se de que possui os seguintes softwares instalados:
 
-✅ Java 21 Verifique com o comando java -version.
-✅ Maven (mvn -v para verificar)
-✅ PostgreSQL (psql --version para verifica)
-✅ Visual Studio Code (VS Code)
-✅ Extensões recomendadas no VS Code:
+- ✅ Java 21 Verifique com o comando java -version.
+- ✅ Maven (mvn -v para verificar)
+- ✅ PostgreSQL (psql --version para verifica)
+- ✅ Visual Studio Code (VS Code)
+- ✅ Extensões recomendadas no VS Code:
 Spring Boot Tools (para integração com o Spring Boot)
 Java Extension Pack (inclui várias ferramentas úteis para Java, como o Language Support for Java)
 
@@ -156,13 +156,13 @@ Use as credenciais configuradas no application.properties (usuário sa, senha pa
 
 ### 📌 Pré-requisitos
 
-✅ Java 21: Verifique com o comando java -version.
-✅ Maven: Verifique com mvn -v.
-✅ Git instalado (opcional, para clonar o repositório).
-✅ Docker e Docker Compose: Verifique com docker --version e docker-compose --version.
-✅ PostgreSQL: Verifique com psql --version.
-✅ Visual Studio Code (VS Code)
-✅ Extensões recomendadas no VS Code:
+- ✅ Java 21: Verifique com o comando java -version.
+- ✅ Maven: Verifique com mvn -v.
+- ✅ Git instalado (opcional, para clonar o repositório).
+- ✅ Docker e Docker Compose: Verifique com docker --version e docker-compose --version.
+- ✅ PostgreSQL: Verifique com psql --version.
+- ✅ Visual Studio Code (VS Code)
+- ✅ Extensões recomendadas no VS Code:
 Spring Boot Tools (para integração com o Spring Boot)
 Java Extension Pack (inclui várias ferramentas úteis para Java, como o Language Support for Java)
 
